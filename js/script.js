@@ -6,22 +6,22 @@ var url = "http://lorempixel.com/640/480/abstract/",
 	galleryImg = document.getElementById("photo"),
 	galleryText = document.getElementById("text");
 
-function prevImg() {
+prevBtn.addEventListener("click", function () {
 	i--;
 	if (i < 1) {
 		i = n;
 	}
 	galleryImg.src = url + i;
 	galleryText.innerHTML = i + " of " + n;
-}
+}, false);
 
-function nextImg() {
+nextBtn.addEventListener("click", function () {
 	i++;
 	if (i > n) {
 		i = 1;
 	}
 	galleryImg.src = url + i;
 	galleryText.innerHTML = i + " of " + n;
-}
+}, false);
 
 galleryText.innerHTML = i + " of " + n;
